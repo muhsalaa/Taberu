@@ -2,60 +2,18 @@ import React from 'react';
 import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
 
-import { FoodTypesCard } from '../components';
-import { colors, Typography } from '../assets/styles';
-import { ms } from '../helpers';
-
-const dummyFoodTypes = [
-  {
-    id: '12',
-    name: 'Fast food',
-    image: require('../assets/images/hamburger.png'),
-    new: 6,
-  },
-  {
-    id: '23s',
-    name: 'Cakes',
-    image: require('../assets/images/cakes.png'),
-    new: 0,
-  },
-  {
-    id: '534',
-    name: 'Chicken',
-    image: require('../assets/images/chicken.png'),
-    new: 0,
-  },
-  {
-    id: '34',
-    name: 'Beverage',
-    image: require('../assets/images/ice.png'),
-    new: 0,
-  },
-  {
-    id: 'x2',
-    name: 'Fast food',
-    image: require('../assets/images/hamburger.png'),
-    new: 6,
-  },
-  {
-    id: '2x3s',
-    name: 'Cakess',
-    image: require('../assets/images/cakes.png'),
-    new: 0,
-  },
-  {
-    id: '5x34',
-    name: 'Chicken',
-    image: require('../assets/images/chicken.png'),
-    new: 0,
-  },
-  {
-    id: '3x4',
-    name: 'Beverage',
-    image: require('../assets/images/ice.png'),
-    new: 0,
-  },
-];
+import { FoodTypesCard, PopularFoodCard, LikeStack } from '../components';
+import {
+  colors,
+  pt2,
+  pl2,
+  font_bold,
+  text_xl,
+  rowFullCenter,
+  justify_between,
+  p2,
+} from '../assets/styles';
+import { dummyFoodTypes, dummyPopularFood } from '../dummies';
 
 const Home = () => {
   return (
@@ -63,17 +21,31 @@ const Home = () => {
       <ScrollView>
         <FlatList
           data={dummyFoodTypes}
-          keyExtractor={item => item.id}
+          keyExtractor={(item) => item.id}
           horizontal
-          contentContainerStyle={{ paddingLeft: ms(10), paddingTop: ms(15) }}
+          contentContainerStyle={{ ...pl2, ...pt2 }}
           showsHorizontalScrollIndicator={false}
           renderItem={({ item }) => {
             return <FoodTypesCard food={item} />;
           }}
         />
         <View style={styles.sectionHeader}>
+          <Text style={styles.sectionTitle}>My Recipe</Text>
+          <LikeStack likes={3} big normalize />
+        </View>
+        <View style={styles.sectionHeader}>
           <Text style={styles.sectionTitle}>Popular</Text>
         </View>
+        <FlatList
+          data={dummyPopularFood}
+          keyExtractor={(item) => item.id}
+          horizontal
+          contentContainerStyle={{ ...pl2 }}
+          showsHorizontalScrollIndicator={false}
+          renderItem={({ item }) => {
+            return <PopularFoodCard food={item} />;
+          }}
+        />
       </ScrollView>
     </SafeAreaView>
   );
@@ -85,14 +57,13 @@ const styles = StyleSheet.create({
     backgroundColor: colors.snow,
   },
   sectionHeader: {
-    padding: ms(10),
-    width: '100%',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    ...p2,
+    ...rowFullCenter,
+    ...justify_between,
   },
   sectionTitle: {
-    ...Typography.xl_b,
+    ...text_xl,
+    ...font_bold,
     color: colors.primary,
   },
 });

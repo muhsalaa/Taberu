@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
-import { layout } from '../assets/styles';
+import { center } from '../assets/styles';
 
 const Shop = () => {
   return (
@@ -12,7 +12,7 @@ const Shop = () => {
 
 const styles = StyleSheet.create({
   container: {
-    ...layout.center,
+    ...center,
   },
 });
 

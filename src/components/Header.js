@@ -8,7 +8,19 @@ import {
 } from 'react-native';
 
 import { ms } from '../helpers';
-import { colors } from '../assets/styles';
+import {
+  colors,
+  ph3,
+  rowFullCenter,
+  mr1,
+  rounded_full,
+  ml2,
+  mr2,
+  ph2,
+  rowFlexCenter,
+  text_sm,
+  p0,
+} from '../assets/styles';
 
 const Header = () => {
   return (
@@ -38,36 +50,32 @@ const Header = () => {
 
 const styles = StyleSheet.create({
   container: {
+    ...rowFullCenter,
+    ...ph3,
     height: ms(70),
     backgroundColor: colors.dark,
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingHorizontal: ms(15),
-    justifyContent: 'space-between',
   },
   icon: {
     height: ms(25),
     width: ms(25),
   },
   iconSearch: {
+    ...mr1,
     height: ms(20),
     width: ms(20),
-    marginRight: ms(5),
   },
   inputContainer: {
-    flexDirection: 'row',
+    ...rowFlexCenter,
+    ...ml2,
+    ...mr2,
+    ...ph2,
+    ...rounded_full,
     backgroundColor: colors.white,
-    borderRadius: 100,
     height: ms(35),
-    alignItems: 'center',
-    flex: 1,
-    marginLeft: ms(10),
-    marginRight: ms(10),
-    paddingHorizontal: ms(10),
   },
   input: {
-    fontSize: ms(12),
-    padding: 0,
+    ...text_sm,
+    ...p0,
     flex: 1,
   },
 });

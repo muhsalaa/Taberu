@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
-import { layout } from '../assets/styles';
+import { Text, StyleSheet, SafeAreaView } from 'react-native';
+import { center } from '../assets/styles';
 
 const Favorites = () => {
   return (
@@ -12,7 +12,7 @@ const Favorites = () => {
 
 const styles = StyleSheet.create({
   container: {
-    ...layout.center,
+    ...center,
   },
 });
 

@@ -1,7 +1,15 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { ms } from '../helpers';
-import { colors, Typography, layout } from '../assets/styles';
+import {
+  centering,
+  colors,
+  text_sm,
+  mb1,
+  rounded_full,
+  text_xs,
+  mr2,
+} from '../assets/styles';
 
 const FoodTypesCard = ({ food }) => {
   return (
@@ -25,40 +33,40 @@ const FoodTypesCard = ({ food }) => {
 
 const styles = StyleSheet.create({
   container: {
+    ...centering,
+    ...mr2,
     height: ms(90),
     width: ms(90),
-    ...layout.centering,
-    marginRight: ms(10),
   },
   foodImage: {
     height: ms(50),
     width: ms(50),
   },
   imageContainer: {
+    ...centering,
+    ...rounded_full,
+    ...mb1,
     width: ms(60),
     height: ms(60),
-    ...layout.centering,
     backgroundColor: colors.snow,
     elevation: 3,
-    borderRadius: 100,
-    marginBottom: ms(5),
   },
   foodName: {
-    ...Typography.sm,
+    ...text_sm,
   },
   badge: {
+    ...centering,
+    ...rounded_full,
     width: ms(20),
     height: ms(20),
-    ...layout.centering,
     backgroundColor: colors.red,
-    borderRadius: 50,
     position: 'absolute',
     top: ms(7),
     right: ms(7),
     elevation: 4,
   },
   badgeText: {
-    ...Typography.xs,
+    ...text_xs,
     color: colors.white,
   },
 });

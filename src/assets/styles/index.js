@@ -1,5 +1,5 @@
 export * from './layout';
 export * from './colors';
-import * as Typography from './typography';
-
-export { Typography };
+export * from './typography';
+export * from './spacing';
+export * from './shadow';

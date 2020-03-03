@@ -2,14 +2,13 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { View, StyleSheet, TouchableOpacity, Text } from 'react-native';
-import { ms, vs } from '../helpers';
+import { ms } from '../helpers';
 
 import { HomeStack } from './HomeStack';
 import { ShopStack } from './ShopStack';
 import { Favorites } from '../views/Favorites';
 import { Profile } from '../views/Profile';
-import { colors } from '../assets/styles';
-import { layout, Typography } from '../assets/styles';
+import { colors, center, text_xs, rowFull } from '../assets/styles';
 
 const CustomTabBar = ({ state, descriptors, navigation }) => {
   return (
@@ -100,20 +99,19 @@ export const BottomTabs = () => {
 
 const styles = StyleSheet.create({
   container: {
-    width: '100%',
+    ...rowFull,
     height: ms(60),
     backgroundColor: colors.primary,
     borderTopLeftRadius: ms(15),
     borderTopRightRadius: ms(15),
-    flexDirection: 'row',
   },
   tabButton: {
-    ...layout.center,
+    ...center,
   },
   icon: {
     margin: -3,
   },
   label: {
-    ...Typography.xs,
+    ...text_xs,
   },
 });

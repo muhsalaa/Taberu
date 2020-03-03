@@ -1,6 +1,5 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { View, Text } from 'react-native';
 
 import { Home } from '../views/Home';
 import { Header } from '../components';
@@ -11,7 +10,7 @@ export const HomeStack = () => {
   return (
     <Stack.Navigator
       screenOptions={{
-        header: props => <Header {...props} />,
+        header: (props) => <Header {...props} />,
       }}>
       <Stack.Screen name="Home" component={Home} />
     </Stack.Navigator>
