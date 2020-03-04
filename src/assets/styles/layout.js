@@ -16,6 +16,10 @@ export const justify_between = {
   justifyContent: 'space-between',
 };
 
+export const justify_around = {
+  justifyContent: 'space-around',
+};
+
 /**
  * CENTER
  */
@@ -73,5 +77,3 @@ export const rounded_md = {
 export const rounded_full = {
   borderRadius: ms(200),
 };
-
-

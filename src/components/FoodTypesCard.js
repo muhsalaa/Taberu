@@ -9,6 +9,7 @@ import {
   rounded_full,
   text_xs,
   mr2,
+  shadow_sm,
 } from '../assets/styles';
 
 const FoodTypesCard = ({ food }) => {
@@ -49,7 +50,7 @@ const styles = StyleSheet.create({
     width: ms(60),
     height: ms(60),
     backgroundColor: colors.snow,
-    elevation: 3,
+    ...shadow_sm,
   },
   foodName: {
     ...text_sm,

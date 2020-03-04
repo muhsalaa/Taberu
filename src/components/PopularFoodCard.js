@@ -20,7 +20,7 @@ import {
 
 const PopularFoodCard = ({ food }) => {
   return (
-    <View style={styles.container} activeOpacity={0.8}>
+    <View style={styles.container}>
       {!!food.new && (
         <View style={styles.badge}>
           <Text style={styles.badgeText}>NEW</Text>
@@ -30,7 +30,7 @@ const PopularFoodCard = ({ food }) => {
         <Ionicons size={ms(18)} color={colors.white} name="ios-heart" />
       </TouchableOpacity>
       <Image source={food.image} style={styles.foodImage} />
-      <Text style={styles.foodName}>{food.name}</Text>
+      <Text style={styles.foodName}>{food.comment}</Text>
       <LikeStack likes={food.likes} />
     </View>
   );

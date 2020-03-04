@@ -29,7 +29,7 @@ const LikeStack = ({ likes, big, normalize }) => {
     <View
       style={[
         styles.container,
-        // if true, will grab this component to right side, to normalize the balnk space created
+        // if true, will grab this component to right side, to normalize the blank space created
         normalize && {
           transform: [
             { translateX: ms((likers.length - 1) * offsetAdjustment) },
