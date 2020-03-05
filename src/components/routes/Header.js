@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-import { ms } from '../helpers';
+import { ms } from '../../helpers';
 import {
   colors,
   ph3,
@@ -20,27 +20,27 @@ import {
   rowFlexCenter,
   text_sm,
   p0,
-} from '../assets/styles';
+} from '../../assets/styles';
 
 const Header = () => {
   return (
     <View style={styles.container}>
       <TouchableOpacity>
         <Image
-          source={require('../assets/images/scan.png')}
+          source={require('../../assets/images/scan.png')}
           style={styles.icon}
         />
       </TouchableOpacity>
       <View style={styles.inputContainer}>
         <Image
-          source={require('../assets/images/search.png')}
+          source={require('../../assets/images/search.png')}
           style={styles.iconSearch}
         />
         <TextInput style={styles.input} />
       </View>
       <TouchableOpacity>
         <Image
-          source={require('../assets/images/bar.png')}
+          source={require('../../assets/images/bar.png')}
           style={styles.icon}
         />
       </TouchableOpacity>

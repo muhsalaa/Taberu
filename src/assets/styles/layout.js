@@ -74,6 +74,10 @@ export const rounded_md = {
   borderRadius: ms(10),
 };
 
+export const rounded_xl = {
+  borderRadius: ms(20),
+};
+
 export const rounded_full = {
   borderRadius: ms(200),
 };

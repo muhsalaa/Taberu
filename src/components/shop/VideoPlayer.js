@@ -11,15 +11,15 @@ import {
   font_bold,
   centering,
   shadow_lg,
-} from '../assets/styles';
+} from '../../assets/styles';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { ms } from '../helpers';
+import { ms } from '../../helpers';
 
 const VideoPlayer = ({ video, thumbnail }) => {
   const [showButton, setShowButton] = useState(true);
   const [paused, setPause] = useState(true);
   const [showThumbnail, setThumbnail] = useState(true);
-  
+
   const hideButton = useCallback(
     debounce(() => setShowButton(false), 1500),
     [],

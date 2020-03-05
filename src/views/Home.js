@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, Dimensions } from 'react-native';
 import {
   FlatList,
   ScrollView,
   TouchableOpacity,
 } from 'react-native-gesture-handler';
+import Carousel from 'react-native-snap-carousel';
 
 import {
   FoodTypesCard,
   PopularFoodCard,
   LikeStack,
   PopularFoodCardLong,
+  CarouselItem,
 } from '../components';
 import {
   colors,
@@ -31,9 +33,11 @@ import {
   ph3,
   mb4,
 } from '../assets/styles';
+import { ms } from '../helpers';
 import { dummyFoodTypes, dummyPopularFood } from '../dummies';
 
 const popularFoodTabs = ['Info', 'Lorem', 'Menu', 'Reviews'];
+const { width } = Dimensions.get('window');
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -58,6 +62,21 @@ const Home = () => {
           <Text style={styles.sectionTitle}>My Recipe</Text>
           <LikeStack likes={3} big normalize />
         </View>
+        <Carousel
+          data={dummyPopularFood}
+          renderItem={CarouselItem}
+          sliderWidth={width + ms(50)}
+          itemWidth={ms(200)}
+          layout="stack"
+          loop
+          inactiveSlideScale={0.7}
+          layoutCardOffset={50}
+          containerCustomStyle={{
+            transform: [{ scaleX: -1 }, { translateX: ms(80) }],
+          }}
+          firstItem={dummyPopularFood.length - 1}
+          inactiveSlideOpacity={1}
+        />
 
         {/* Popular food comment and likes */}
         <View style={styles.sectionTitleContainer}>

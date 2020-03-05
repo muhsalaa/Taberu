@@ -1,5 +1,10 @@
 import { ms } from '../../helpers';
 
+export const text_xxs = {
+  fontSize: ms(8),
+  fontFamily: 'Montserrat-Regular',
+};
+
 export const text_xs = {
   fontSize: ms(10),
   fontFamily: 'Montserrat-Regular',

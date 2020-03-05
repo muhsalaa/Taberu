@@ -88,7 +88,7 @@ export const BottomTabs = () => {
   const Tabs = createBottomTabNavigator();
 
   return (
-    <Tabs.Navigator tabBar={props => <CustomTabBar {...props} />}>
+    <Tabs.Navigator tabBar={(props) => <CustomTabBar {...props} />}>
       <Tabs.Screen name="Home" component={HomeStack} />
       <Tabs.Screen name="Shop" component={ShopStack} />
       <Tabs.Screen name="Favorites" component={Favorites} />

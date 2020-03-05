@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
-import { ms } from '../helpers';
+import { ms } from '../../helpers';
 import {
   centering,
   colors,
@@ -10,7 +10,7 @@ import {
   text_xs,
   mr2,
   shadow_sm,
-} from '../assets/styles';
+} from '../../assets/styles';
 
 const FoodTypesCard = ({ food }) => {
   return (

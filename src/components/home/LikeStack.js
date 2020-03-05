@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import {
   row,
@@ -10,13 +9,13 @@ import {
   items_center,
   font_bold,
   colors,
-} from '../assets/styles';
-import { ms } from '../helpers';
+} from '../../assets/styles';
+import { ms } from '../../helpers';
 
 const images = [
-  require('../assets/images/man1.png'),
-  require('../assets/images/man2.png'),
-  require('../assets/images/man3.png'),
+  require('../../assets/images/man1.png'),
+  require('../../assets/images/man2.png'),
+  require('../../assets/images/man3.png'),
 ];
 
 const LikeStack = ({ likes, big, normalize }) => {
@@ -51,7 +50,7 @@ const LikeStack = ({ likes, big, normalize }) => {
               />
               {likers.length - 1 === index && (
                 <Image
-                  source={require('../assets/images/hearts.png')}
+                  source={require('../../assets/images/hearts.png')}
                   style={[
                     // adjust small heart icon placing, give absolute position and bottom 0
                     // then calculate the offset and add one offsetAdjustment to place icon on right side

@@ -3,7 +3,7 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { LikeStack } from './LikeStack';
-import { ms } from '../helpers';
+import { ms } from '../../helpers';
 import {
   centering,
   colors,
@@ -16,7 +16,7 @@ import {
   rounded_full,
   mb3,
   ml2,
-} from '../assets/styles';
+} from '../../assets/styles';
 
 const PopularFoodCard = ({ food }) => {
   return (

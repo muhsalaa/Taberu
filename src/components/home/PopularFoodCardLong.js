@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 
-import { ms } from '../helpers';
+import { ms } from '../../helpers';
 import {
   text_sm,
   font_bold,
@@ -16,7 +16,7 @@ import {
   p3,
   justify_center,
   colors,
-} from '../assets/styles';
+} from '../../assets/styles';
 
 const PopularFoodCardLong = ({ food }) => {
   return (
