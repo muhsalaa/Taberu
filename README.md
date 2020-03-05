@@ -1,6 +1,6 @@
 ## Step to Install
 
-Make sure you have a development environment ready. You can follow tutorial from this [link]('https://muhsalaa.netlify.com/blog/instalasi-dan-pengenalan-framework-react-native') to start.
+Make sure you have a development environment ready. You can follow tutorial from this [link](https://muhsalaa.netlify.com/blog/instalasi-dan-pengenalan-framework-react-native) to start.
 
 ### Install dependencies
 
